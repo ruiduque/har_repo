@@ -80,3 +80,4 @@ mean_tidy <- mean_std_df %>%
         summarise_all(mean, na.rm = TRUE)
 
 
+
