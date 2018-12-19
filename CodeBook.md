@@ -76,9 +76,9 @@ The raw dataset used as input for this script is available in the folder "UCI HA
 Glimpse of the final tidy dataset
 =================================
 
-###Observations: 180
+#### Observations: 180
 
-###Variables: 68
+#### Variables: 68
 
 * activity                  **fct** LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, L...
 * subject                   **int** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27...
@@ -148,3 +148,4 @@ Glimpse of the final tidy dataset
 * `fBodyGyroMag-std()`      **dbl** -0.8243194, -0.9610984, -0.9554419, -0.9471003, -0.9592631, -0.9286949, -0.9188925, -0.9367870, -...
 * `fBodyGyroJerkMag-mean()` **dbl** -0.9423669, -0.9902487, -0.9842783, -0.9836091, -0.9846180, -0.9536960, -0.9741179, -0.9684039, -...
 * `fBodyGyroJerkMag-std()`  **dbl** -0.9326607, -0.9894927, -0.9825682, -0.9825436, -0.9834345, -0.9555047, -0.9694030, -0.9717933, -...
+
