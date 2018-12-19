@@ -14,10 +14,11 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-Note: detailed information is available in the 'features.txt' available un the folder 'UCI HAR Dataset'
+Note: detailed information about the source data is available under folder 'UCI HAR Dataset'.
 
 
 The process followed to generate the tidy dataset is as follows:
+
 - Merges the training and the test sets to create one data set.
 - Extracts only the measurements on the mean and standard deviation for each measurement.
 - Uses descriptive activity names to name the activities in the data set
