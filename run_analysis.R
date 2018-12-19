@@ -79,3 +79,4 @@ mean_tidy <- mean_std_df %>%
         group_by(activity, subject) %>%
         summarise_all(mean, na.rm = TRUE)
 
+write.table(mean_tidy, file = "RS_tidy_data.txt", row.name=FALSE)
