@@ -65,12 +65,15 @@ fBodyGyroMag
 
 fBodyGyroJerkMag
 
+
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
+**mean()**: Mean value
 
-The raw dataset used as input for this script is available in the folder "UCI HAR Dataset".
+**std()**: Standard deviation
+
+
+**Note:**The raw dataset used as input for this script is available in the folder "UCI HAR Dataset".
 
 Glimpse of the final tidy dataset
 =================================
