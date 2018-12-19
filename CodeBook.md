@@ -78,6 +78,7 @@ Glimpse of the final tidy dataset
 =================================
 
 ###Observations: 180
+
 ###Variables: 68
 ---
 * activity                  <fct> LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, L...
