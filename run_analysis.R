@@ -79,5 +79,3 @@ mean_tidy <- mean_std_df %>%
         group_by(activity, subject) %>%
         summarise_all(mean, na.rm = TRUE)
 
-
-
