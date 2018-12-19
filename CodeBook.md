@@ -2,7 +2,6 @@
 # CodeBook
 # Getting and Cleaning Data Course Project
 ### by: Rui Santos | Dec-2018
-
 ==================================================================
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
@@ -80,7 +79,7 @@ Glimpse of the final tidy dataset
 ###Observations: 180
 
 ###Variables: 68
----
+
 * activity                  **fct** LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, LAYING, L...
 * subject                   **int** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27...
 * `tBodyAcc-mean()-X`       **dbl** 0.2215982, 0.2813734, 0.2755169, 0.2635592, 0.2783343, 0.2486565, 0.2501767, 0.2612543, 0.2591955...
