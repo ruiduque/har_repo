@@ -143,6 +143,7 @@ $(document).ready(function () {
 <li>Uses descriptive activity names to name the activities in the data set</li>
 <li>Appropriately labels the data set with descriptive variable names.</li>
 <li>From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.</li>
+<li>Writes the final tidy dataset to a text file</li>
 </ol>
 <p>==================================================================</p>
 </div>
@@ -164,46 +165,19 @@ $(document).ready(function () {
 <div id="files-created-for-this-project" class="section level3">
 <h3>Files created for this project:</h3>
 <ul>
-<li><p>‘README.md’ Markdown version of this file</p></li>
-<li><p>‘README.html’ Html version of this file</p></li>
-<li><p>‘es2013-84.pdf’ Academic paper describing the original experiment and base dataset</p></li>
-<li><p>‘UCI HAR Dataset’ Folder containing the original dataset files</p></li>
-<li><p>‘run_analysis.R’ Main script containing the code to perform the 5 points analysis described above.</p></li>
-<li><p>‘CodeBook.md’ Markdown file with details about the variables and analysis performed by the code of this project.</p></li>
-<li><p>‘har_repo.Rproj’ R project configuration file</p></li>
-</ul>
-<p>Note: The files under the base dataset folder “UCI HAR Dataset” are described in the “README.md” file contained within that folder.</p>
-<p>==================================================================</p>
-</div>
-<div id="files-used-from-the-uci-har-dataset" class="section level3">
-<h3>Files used from the “UCI HAR Dataset”:</h3>
-<ul>
-<li><p>‘README.txt’</p></li>
-<li><p>‘features_info.txt’: Shows information about the variables used on the feature vector.</p></li>
-<li><p>‘features.txt’: List of all features.</p></li>
-<li><p>‘activity_labels.txt’: Links the class labels with their activity name.</p></li>
-<li><p>‘train/X_train.txt’: Training set.</p></li>
-<li><p>‘train/y_train.txt’: Training labels.</p></li>
-<li><p>‘test/X_test.txt’: Test set.</p></li>
-<li><p>‘test/y_test.txt’: Test labels.</p></li>
-</ul>
-<p>The following files are available for the train and test data. Their descriptions are equivalent.</p>
-<ul>
-<li><p>‘train/subject_train.txt’: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.</p></li>
-<li><p>‘train/Inertial Signals/total_acc_x_train.txt’: The acceleration signal from the smartphone accelerometer X axis in standard gravity units ‘g’. Every row shows a 128 element vector. The same description applies for the ‘total_acc_x_train.txt’ and ‘total_acc_z_train.txt’ files for the Y and Z axis.</p></li>
-<li><p>‘train/Inertial Signals/body_acc_x_train.txt’: The body acceleration signal obtained by subtracting the gravity from the total acceleration.</p></li>
-<li><p>‘train/Inertial Signals/body_gyro_x_train.txt’: The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.</p></li>
+<li><p><strong>README.md</strong> Markdown version of this file</p></li>
+<li><p><strong>README.html</strong> Html version of this file</p></li>
+<li><p><strong>es2013-84.pdf</strong> Academic paper describing the original experiment and base dataset</p></li>
+<li><p><strong>UCI HAR Dataset</strong> Source dataset files</p></li>
+<li><p><strong>run_analysis.R</strong> Main script containing the code to perform the analysis described above.</p></li>
+<li><p><strong>CodeBook.md</strong> Markdown file with details about the variables and analysis performed by the code of this project.</p></li>
+<li><p><strong>har_repo.Rproj</strong> R project configuration file</p></li>
+<li><p><strong>RS_tidy_data.txt</strong> Output tidy dataset</p></li>
 </ul>
 </div>
 </div>
-<div id="notes" class="section level1">
-<h1>Notes:</h1>
-<ul>
-<li>Features are normalized and bounded within [-1,1].</li>
-<li>Each feature vector is a row on the text file.</li>
-</ul>
-<p>For more information about this dataset contact: <a href="mailto:activityrecognition@smartlab.ws">activityrecognition@smartlab.ws</a></p>
-<p>==================================================================</p>
+<div id="note-the-files-under-the-base-dataset-folder-uci-har-dataset-are-described-in-the-readme.md-file-contained-within-that-folder." class="section level1">
+<h1>Note: The files under the base dataset folder “UCI HAR Dataset” are described in the “README.md” file contained within that folder.</h1>
 <div id="references" class="section level3">
 <h3>References:</h3>
 <p>Use of this dataset in publications must be acknowledged by referencing the following publication [1]</p>

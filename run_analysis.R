@@ -16,6 +16,7 @@ trainfolder <- paste(maindatasetfolder,"train/", sep = "")
 setwd(repoloc)
 
 # File locations
+uci_raw_data <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 actlabelloc <- paste(maindatasetfolder,"activity_labels.txt", sep = "")
 featloc <- paste(maindatasetfolder,"features.txt", sep = "")
 subtest <- paste(testfolder, "subject_test.txt", sep = "")
@@ -24,6 +25,14 @@ test_y_labels <- paste(testfolder, "y_test.txt", sep = "")
 train_y_labels <- paste(trainfolder, "y_train.txt", sep = "")
 x_test <- paste(testfolder, "X_test.txt", sep = "")
 x_train <- paste(trainfolder, "X_train.txt", sep = "")
+
+
+## Check if folder "UCI HAR Dataset exists. If not, download it first and create (unzip) raw data
+if(!file.exists("./UCI HAR Dataset")){
+        download.file(uci_raw_data, "uci_raw_data.zip")
+        unzip("uci_raw_data.zip")
+}
+
 
 ## Read files
 activitylabels <- readr::read_delim(actlabelloc, delim = " ", col_names = c("activity", "activity_label"))
@@ -62,14 +71,23 @@ mean_std_df <- as_tibble(cbind(one_dataset[,"subject"], one_dataset[,"activity"]
 
 ##
 ## 3. Uses descriptive activity names to name the activities in the data set
-##      - Note: most of the variables have already been set with descriptive names. 
+##       
 
+# - activity descriptive names already in the dataset - nothing to do here...
 
 ##
 ## 4. Appropriately labels the data set with descriptive variable names.
 ##      - Note: only changing six variables which seem to have wrong names 
 ##              e.g. "fBodyBodyGyroJerkMag-std()" to "fBodyGyroJerkMag-std()"      
 names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "BodyBody", "Body")
+names(mean_std_df) <- stringr::str_replace_all(names(mean_std_df), "-mean()", "Mean")
+names(mean_std_df) <- stringr::str_replace_all(names(mean_std_df), "-std()", "StdDev")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "Mag", "Magnitude")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "^t", "Time")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "^f", "Frequency")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "Acc", "Accelerometer")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "Gyro", "Gyroscope")
+names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "Mag", "Magnitude")
 
 ##
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity
@@ -78,5 +96,9 @@ names(mean_std_df) <- stringr::str_replace(names(mean_std_df), "BodyBody", "Body
 mean_tidy <- mean_std_df %>%
         group_by(activity, subject) %>%
         summarise_all(mean, na.rm = TRUE)
+
+##
+## 6. Write tidy dataset to text file "RS_tidy_data.txt"
+##
 
 write.table(mean_tidy, file = "RS_tidy_data.txt", row.name=FALSE)
